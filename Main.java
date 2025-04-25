@@ -37,7 +37,7 @@ public class Main {
                     System.out.println("Insira o departamento do funcionário (Administração, RH ou Produção): ");
                     String departamento = scanner.nextLine();
                 
-                    System.out.println("Insira o cargo do funcionário (Gerente, Desenvolvedor ou Estagiário): ");
+                    System.out.println("Insira o cargo do funcionário (Gerente, Desenvolvedor ou Estagiario): ");
                     String cargo = scanner.nextLine();
 
                     if(cargo.equalsIgnoreCase("Gerente")){
@@ -46,7 +46,7 @@ public class Main {
                     } else if(cargo.equalsIgnoreCase("Desenvolvedor")){
                             Desenvolvedor dev = new Desenvolvedor(cpf, data_nasc, nome, salario, departamento);
                             devs.add(dev);
-                    } else if(cargo.equalsIgnoreCase("Estagiário")){
+                    } else if(cargo.equalsIgnoreCase("Estagiario")){
                             Estagiario estagiario = new Estagiario(cpf, data_nasc, nome, salario, departamento);
                             estagiarios.add(estagiario);
                     }
@@ -59,29 +59,37 @@ public class Main {
                         System.out.println("Desenvolvedores: \n");
                         for(int i = 0; i < devs.size(); i++){
                             devs.get(i).mostrarDados();
+                            System.out.println("\n");
                         }
+                    
                         System.out.println("Gerentes: \n");
                         for(int i = 0; i < gerentes.size(); i++){
                             gerentes.get(i).mostrarDados();
+                            System.out.println("\n");
                         }
+
                         System.out.println("Estagiários: \n");
                         for(int i = 0; i < estagiarios.size(); i++){
                             estagiarios.get(i).mostrarDados();
+                            System.out.println("\n");
                         }
                     } else if( op2 == 2){
                         System.out.println("Gerentes: \n");
                         for(int i = 0; i < gerentes.size(); i++){
                             gerentes.get(i).mostrarDados();
+                            System.out.println("\n");
                         }
                     } else if (op2 == 3){
                         System.out.println("Desenvolvedores: \n");
                         for(int i = 0; i < devs.size(); i++){
                             devs.get(i).mostrarDados();
+                            System.out.println("\n");
                         }
-                    } else if (op == 4) {
+                    } else if (op2 == 4) {
                         System.out.println("Estagiários: \n");
                         for(int i = 0; i < estagiarios.size(); i++){
                             estagiarios.get(i).mostrarDados();
+                            System.out.println("\n");
                         }
                     }
                 break;
