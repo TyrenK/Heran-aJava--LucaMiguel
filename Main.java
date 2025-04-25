@@ -6,9 +6,12 @@ public class Main {
         System.out.println("Bem-vindo ao Sistema de Cadastro dos Funcionários!");
         int op = 0;
         Scanner scanner = new Scanner(System.in);
+
+        // Listas para armazenar os funcionários por cargo
         ArrayList<Gerente> gerentes = new ArrayList<Gerente>();
         ArrayList<Desenvolvedor> devs = new ArrayList<Desenvolvedor>();
         ArrayList<Estagiario> estagiarios = new ArrayList<Estagiario>();
+
         do{
             System.out.println("1 - Cadastrar novo funcionário \n2 - Exibir os dados dos funcionários cadastrados \n3 - Sair");
             System.out.println("O que gostaria de fazer? ");
@@ -17,7 +20,8 @@ public class Main {
             switch (op) {
                 case 1:
                     System.out.println("Iniciando cadastro! \n");
-        
+
+                    // Consome a quebra de linha pendente do nextInt()
                     scanner.nextLine(); 
                 
                     System.out.println("Insira o CPF do funcionário: ");
@@ -40,6 +44,7 @@ public class Main {
                     System.out.println("Insira o cargo do funcionário (Gerente, Desenvolvedor ou Estagiario): ");
                     String cargo = scanner.nextLine();
 
+                    // Cria o objeto com base no cargo e armazena na lista correspondente
                     if(cargo.equalsIgnoreCase("Gerente")){
                             Gerente gerente = new Gerente(cpf, data_nasc, nome, salario, departamento);
                             gerentes.add(gerente);
@@ -53,9 +58,11 @@ public class Main {
                 break;
                 
                 case 2:
+                    // Permite ao usuário escolher quais funcionários deseja visualizar
                     System.out.println("Gostaria de exibir os dados de quais Funcionários?: \n1 - Todos \n2 - Gerente \n3 - Desenvolvedor \n4 - Estagiário");
                     int op2 = scanner.nextInt();
                     if(op2 == 1){
+
                         System.out.println("Desenvolvedores: \n");
                         for(int i = 0; i < devs.size(); i++){
                             devs.get(i).mostrarDados();
@@ -73,6 +80,7 @@ public class Main {
                             estagiarios.get(i).mostrarDados();
                             System.out.println("\n");
                         }
+                    //Estrutura de repetição para a exibição dos dados de cargos específicos
                     } else if( op2 == 2){
                         System.out.println("Gerentes: \n");
                         for(int i = 0; i < gerentes.size(); i++){

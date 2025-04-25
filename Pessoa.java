@@ -2,13 +2,13 @@ public class Pessoa {
     private String cpf;
     private String data_nasc;
 
+    // Construtor
     public Pessoa(String cpf, String data_nasc) {
         this.cpf = cpf;
         this.data_nasc = data_nasc;
     }
 
-    public Pessoa(){}; 
-
+    //Métodos GETTER e SETTER
     public String getCpf(){
         return cpf;
     }

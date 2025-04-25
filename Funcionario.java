@@ -3,14 +3,15 @@ public class Funcionario extends Pessoa{
     private float salario;
     private String departamento;
 
+    // Construtor
     public Funcionario(String cpf, String data_nasc, String nome, float salario, String departamento){
         super(cpf, data_nasc);
         this.nome = nome;
         this.salario = salario;
         this.departamento = departamento;
     }
-    public Funcionario(){}
 
+    //Métodos GETTER e SETTER
     public String getNome(){
         return nome;
     }
@@ -35,6 +36,7 @@ public class Funcionario extends Pessoa{
         this.departamento = departamento;
     }
     
+    //Métodos
     public void mostrarDados(){
         System.out.println("Nome: "+ nome +"\nCPF: " + getCpf() + "\nData de Nascimento: "+ getData_nasc() +"\nSalario: R$"+ salario +"\nDepartamento: "+ departamento);
     }
