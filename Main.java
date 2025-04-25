@@ -34,7 +34,7 @@ public class Main {
                 
                     scanner.nextLine(); 
                 
-                    System.out.println("Insira o departamento do funcionário (Administração, RH ou Produção): ");
+                    System.out.println("Insira o departamento do funcionário (Logística, Recursos Humanos ou Marketing): ");
                     String departamento = scanner.nextLine();
                 
                     System.out.println("Insira o cargo do funcionário (Gerente, Desenvolvedor ou Estagiario): ");

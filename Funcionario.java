@@ -36,7 +36,7 @@ public class Funcionario extends Pessoa{
     }
     
     public void mostrarDados(){
-        System.out.println("Nome: "+ nome +"\nCPF: " + getCpf() + "\nData de Nascimento: "+ getData_nasc() +"\nSalario: "+ salario +"\nDepartamento: "+ departamento);
+        System.out.println("Nome: "+ nome +"\nCPF: " + getCpf() + "\nData de Nascimento: "+ getData_nasc() +"\nSalario: R$"+ salario +"\nDepartamento: "+ departamento);
     }
 
     public void baterPonto(){
