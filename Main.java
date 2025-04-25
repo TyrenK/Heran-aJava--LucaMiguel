@@ -17,16 +17,26 @@ public class Main {
             switch (op) {
                 case 1:
                     System.out.println("Iniciando cadastro! \n");
+        
+                    scanner.nextLine(); 
+                
                     System.out.println("Insira o CPF do funcionário: ");
                     String cpf = scanner.nextLine();
+                
                     System.out.println("Insira a data de nascimento do funcionário (Ex.: 26/05/2007): ");
                     String data_nasc = scanner.nextLine();
+                
                     System.out.println("Insira o nome do funcionário: ");
                     String nome = scanner.nextLine();
+                
                     System.out.println("Insira o salário do funcionário: ");
                     float salario = scanner.nextFloat();
+                
+                    scanner.nextLine(); 
+                
                     System.out.println("Insira o departamento do funcionário (Administração, RH ou Produção): ");
                     String departamento = scanner.nextLine();
+                
                     System.out.println("Insira o cargo do funcionário (Gerente, Desenvolvedor ou Estagiário): ");
                     String cargo = scanner.nextLine();
 
@@ -46,31 +56,31 @@ public class Main {
                     System.out.println("Gostaria de exibir os dados de quais Funcionários?: \n1 - Todos \n2 - Gerente \n3 - Desenvolvedor \n4 - Estagiário");
                     int op2 = scanner.nextInt();
                     if(op2 == 1){
+                        System.out.println("Desenvolvedores: \n");
                         for(int i = 0; i < devs.size(); i++){
-                            System.out.println("Desenvolvedores: \n");
                             devs.get(i).mostrarDados();
                         }
+                        System.out.println("Gerentes: \n");
                         for(int i = 0; i < gerentes.size(); i++){
-                            System.out.println("Gerentes: \n");
                             gerentes.get(i).mostrarDados();
                         }
+                        System.out.println("Estagiários: \n");
                         for(int i = 0; i < estagiarios.size(); i++){
-                            System.out.println("Estagiários: \n");
                             estagiarios.get(i).mostrarDados();
                         }
                     } else if( op2 == 2){
+                        System.out.println("Gerentes: \n");
                         for(int i = 0; i < gerentes.size(); i++){
-                            System.out.println("Gerentes: \n");
                             gerentes.get(i).mostrarDados();
                         }
                     } else if (op2 == 3){
+                        System.out.println("Desenvolvedores: \n");
                         for(int i = 0; i < devs.size(); i++){
-                            System.out.println("Desenvolvedores: \n");
                             devs.get(i).mostrarDados();
                         }
                     } else if (op == 4) {
+                        System.out.println("Estagiários: \n");
                         for(int i = 0; i < estagiarios.size(); i++){
-                            System.out.println("Estagiários: \n");
                             estagiarios.get(i).mostrarDados();
                         }
                     }
